@@ -8,7 +8,6 @@ import React, {
   useMemo,
 } from 'react';
 import {
-  Platform,
   StyleSheet,
   TextInput,
   TextInputProps,
@@ -353,9 +352,8 @@ const InputOutlineComponent = forwardRef<InputOutline, InputOutlineProps>(
       },
       inputContainer: {
         flex: 1,
+        paddingVertical,
         paddingHorizontal,
-        paddingVertical:
-          Platform.OS !== 'android' ? paddingVertical : undefined,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
